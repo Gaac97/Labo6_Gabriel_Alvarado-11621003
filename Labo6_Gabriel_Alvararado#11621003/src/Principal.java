@@ -1,9 +1,14 @@
+
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Gabriel Alvarado
@@ -26,21 +31,264 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Login = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        l_login = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        l_contra = new javax.swing.JPasswordField();
+        Mensajeria = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        r_fecha = new com.toedter.calendar.JDateChooser();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        r_apellido = new javax.swing.JTextField();
+        r_nombre = new javax.swing.JTextField();
+        r_pais = new javax.swing.JTextField();
+        r_correo = new javax.swing.JTextField();
+        r_numero = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        r_contra = new javax.swing.JPasswordField();
+        jLabel12 = new javax.swing.JLabel();
+        r_contrac = new javax.swing.JPasswordField();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel9.setText("Login");
+
+        jLabel10.setText("Iniciar Sesion");
+
+        jLabel11.setText("Contraseña");
+
+        jButton3.setText("Iniciar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout LoginLayout = new javax.swing.GroupLayout(Login.getContentPane());
+        Login.getContentPane().setLayout(LoginLayout);
+        LoginLayout.setHorizontalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginLayout.createSequentialGroup()
+                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LoginLayout.createSequentialGroup()
+                        .addGap(373, 373, 373)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(LoginLayout.createSequentialGroup()
+                        .addGap(234, 234, 234)
+                        .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(LoginLayout.createSequentialGroup()
+                                .addGap(84, 84, 84)
+                                .addComponent(l_login, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(LoginLayout.createSequentialGroup()
+                                .addGap(56, 56, 56)
+                                .addComponent(l_contra, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(LoginLayout.createSequentialGroup()
+                        .addGap(353, 353, 353)
+                        .addComponent(jButton3)))
+                .addContainerGap(386, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        LoginLayout.setVerticalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel9)
+                .addGap(44, 44, 44)
+                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(l_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(89, 89, 89)
+                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(l_contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(80, 80, 80))
         );
+
+        Mensajeria.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel13.setText("Mensajeria");
+        Mensajeria.getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 120, 47));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setText("Destinatario");
+        Mensajeria.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, -1));
+
+        jButton6.setText("Listar Usuarios");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        Mensajeria.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("Registro");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 55, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Nombre");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 151, 102, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Apellido");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 185, 102, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("Correo Unico");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 266, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setText("Pais");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 220, 70, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setText("Numero");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 209, -1, -1));
+        getContentPane().add(r_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 120, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("Fecha");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Contraseña");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 267, -1, -1));
+        getContentPane().add(r_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 189, 95, -1));
+
+        r_nombre.setText(" ");
+        getContentPane().add(r_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 155, 95, -1));
+        getContentPane().add(r_pais, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 224, 93, -1));
+        getContentPane().add(r_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 270, 95, -1));
+        getContentPane().add(r_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 110, -1));
+
+        jButton1.setText("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 400, -1, -1));
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setText("Login");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(731, 411, -1, -1));
+        getContentPane().add(r_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 110, -1));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setText("Confirmar Contraseña");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, -1, -1));
+        getContentPane().add(r_contrac, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 320, 100, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        AdministrarUsuarios p = new AdministrarUsuarios("./salida.txt");
+        String nombre = "";
+        String apellido = "";
+        String correo = "";
+        String fecha = "";
+        String pais = "";
+        String contraseña = "";
+        String numero;
+        String nuevaC = "";
+
+        try {
+            nombre = r_nombre.getText();
+            apellido = r_apellido.getText();
+            correo = r_apellido.getText();
+            fecha = (r_fecha.getDate().toString());
+            pais = r_pais.getText();
+            contraseña = r_contra.getText();
+            numero = r_numero.getText();
+            nuevaC = r_contrac.getText();
+
+            if (r_contra.getText().equalsIgnoreCase(nuevaC)) {
+
+                Usuario user = new Usuario(nombre, apellido, correo, pais, fecha, numero, contraseña);
+                ListUsuario.add(user);
+                p.CargarArchivo();
+                p.setUsuario(user);
+                p.escribirArchivo();
+                p.getListUsuario();
+                r_nombre.setText("");
+                r_apellido.setText("");
+                r_correo.setText("");
+                r_fecha.setDate(null);
+                r_pais.setText("");
+                r_contra.setText("");
+                r_contrac.setText("");
+                r_numero.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "La contraseña no es la misma");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String correo = "";
+        String Contraseña = "";
+        for (Usuario t : ListUsuario) {
+
+            if (t.getCorreo().equalsIgnoreCase(l_login.getText()) && t.getContraseña().equalsIgnoreCase(l_contra.getText())) {
+                JOptionPane.showMessageDialog(this, "Inicio correctamente");
+
+                Mensajeria.setVisible(true);
+                Mensajeria.setModal(true);
+                Mensajeria.pack();
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Contraseña Incorrecta");
+            }
+    }//GEN-LAST:event_jButton3ActionPerformed
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Login.setVisible(true);
+        Login.setModal(true);
+        Login.pack();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        String p1 = "";
+        for (Usuario t1 : ListUsuario) {
+            if (t1 instanceof Usuario) {
+                p1 += ListUsuario.indexOf(t1) + " " + ((Usuario) t1) + "\n";
+            }
+        }
+        JOptionPane.showMessageDialog(null, p1);
+        Mensajeria.setVisible(true);
+        Mensajeria.setModal(true);
+        Mensajeria.pack();
+
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -53,7 +301,7 @@ public class Principal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Window".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -78,5 +326,37 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Login;
+    private javax.swing.JDialog Mensajeria;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPasswordField l_contra;
+    private javax.swing.JTextField l_login;
+    private javax.swing.JTextField r_apellido;
+    private javax.swing.JPasswordField r_contra;
+    private javax.swing.JPasswordField r_contrac;
+    private javax.swing.JTextField r_correo;
+    private com.toedter.calendar.JDateChooser r_fecha;
+    private javax.swing.JTextField r_nombre;
+    private javax.swing.JTextField r_numero;
+    private javax.swing.JTextField r_pais;
     // End of variables declaration//GEN-END:variables
+ArrayList<Usuario> ListUsuario = new ArrayList();
+
 }
