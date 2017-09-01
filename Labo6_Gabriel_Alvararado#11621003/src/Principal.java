@@ -41,7 +41,10 @@ public class Principal extends javax.swing.JFrame {
         Mensajeria = new javax.swing.JDialog();
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        m_correo = new javax.swing.JTextField();
+        m_destinatario = new javax.swing.JComboBox();
+        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -130,13 +133,22 @@ public class Principal extends javax.swing.JFrame {
         jLabel15.setText("Destinatario");
         Mensajeria.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, -1));
 
-        jButton6.setText("Listar Usuarios");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setText("Correo");
+        Mensajeria.getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
+
+        m_correo.setText(" ");
+        Mensajeria.getContentPane().add(m_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 90, -1));
+
+        Mensajeria.getContentPane().add(m_destinatario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 130, -1));
+
+        jButton4.setText("Cargar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        Mensajeria.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
+        Mensajeria.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, -1, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -276,19 +288,15 @@ public class Principal extends javax.swing.JFrame {
         Login.pack();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        String p1 = "";
-        for (Usuario t1 : ListUsuario) {
-            if (t1 instanceof Usuario) {
-                p1 += ListUsuario.indexOf(t1) + " " + ((Usuario) t1) + "\n";
-            }
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    AdministrarUsuarios ap = new AdministrarUsuarios("/.salida.txt");
+    ap.CargarArchivo();
+    DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (Usuario p : ap.getListUsuario()) {
+            modelo.addElement(p);
         }
-        JOptionPane.showMessageDialog(null, p1);
-        Mensajeria.setVisible(true);
-        Mensajeria.setModal(true);
-        Mensajeria.pack();
-
-    }//GEN-LAST:event_jButton6ActionPerformed
+        m_destinatario.setModel(modelo);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,12 +339,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -348,6 +357,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField l_contra;
     private javax.swing.JTextField l_login;
+    private javax.swing.JTextField m_correo;
+    private javax.swing.JComboBox m_destinatario;
     private javax.swing.JTextField r_apellido;
     private javax.swing.JPasswordField r_contra;
     private javax.swing.JPasswordField r_contrac;

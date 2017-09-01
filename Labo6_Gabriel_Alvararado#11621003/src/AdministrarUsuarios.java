@@ -77,7 +77,7 @@ public class AdministrarUsuarios {
     public void CargarArchivo() {
         Scanner sc = null;
         if (archivo.exists()) {
-            ListUsuario = new ArrayList();
+            ListUsuario= new ArrayList();
             try {
                 sc = new Scanner(archivo);
                 sc.useDelimiter(";");
