@@ -86,6 +86,7 @@ public class AdministrarUsuarios {
                     ListUsuario.add(new Usuario(sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next()));
                 }
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }//Fin Exist

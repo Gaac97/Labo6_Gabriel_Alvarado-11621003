@@ -292,8 +292,8 @@ public class Principal extends javax.swing.JFrame {
     AdministrarUsuarios ap = new AdministrarUsuarios("/.salida.txt");
     ap.CargarArchivo();
     DefaultComboBoxModel modelo = new DefaultComboBoxModel();
-        for (Usuario p : ap.getListUsuario()) {
-            modelo.addElement(p);
+        for (Usuario t : ap.getListUsuario()) {
+            modelo.addElement(t);
         }
         m_destinatario.setModel(modelo);
     }//GEN-LAST:event_jButton4ActionPerformed
